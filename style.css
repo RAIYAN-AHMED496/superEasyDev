@@ -1,0 +1,226 @@
+/* * {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f0f2f5;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.name {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+.container div {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 1rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+input[type="text"]:read-only {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.calculate-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculate-btn:hover {
+  background-color: #218838;
+} */
+
+/* 2nd stle */
+/* Global Reset and Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Container */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  animation: fadeIn 1s ease;
+}
+
+/* Animated Fade-In */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Title */
+.name {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Labels & Inputs */
+.container div {
+  margin-bottom: 20px;
+}
+
+label {
+  color: #f1f1f1;
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 2px #ff9a9e;
+}
+
+input[type="text"]:read-only {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #e0e0e0;
+}
+
+/* Button */
+.calculate-btn {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  color: #000;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.calculate-btn:hover {
+  background: linear-gradient(135deg, #38f9d7, #43e97b);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* more style to the alert message */
+/* Custom Alert Modal */
+.custom-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.4s ease;
+}
+
+.alert-box {
+  background: #ffffff;
+  color: #333;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: popUp 0.4s ease;
+}
+
+.alert-box p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.alert-box button {
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.alert-box button:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes popUp {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}

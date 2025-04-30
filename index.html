@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAPM</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main">
+    <div class="container">
+      <div class="name">CAPM</div>
+      <input type="text" class="answer" readonly>
+      <div>
+        <label>Rf</label>
+        <input type="text" class="risk-free js-risk-free" placeholder="Risk Free return">
+      </div>
+      <div>
+        <label>Rm</label>
+        <input type="text" class="market-risk js-market-risk" placeholder="Market-risk">
+      </div>
+      <div>
+        <label>β</label>
+        <input type="text" class="bita js-bita" placeholder="Bita">
+      </div>
+      <button class="calculate-btn js-calculate-button" onclick="calculateTotal()">Calculate</button>
+    </div>
+  </div>
+
+  <!-- Custom Alert Modal -->
+  <div class="custom-alert" id="customAlert">
+    <div class="alert-box">
+      <p id="alertMessage">Enter all the values!</p>
+      <button onclick="closeAlert()">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
